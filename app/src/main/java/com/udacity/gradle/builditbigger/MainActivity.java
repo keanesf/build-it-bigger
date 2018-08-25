@@ -46,11 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        // pass the random joke as intent to JokeDisplayActivity
-        Intent intent = new Intent(this, JokeDisplayActivity.class);
-        intent.putExtra(JokeDisplayActivity.INTENT_JOKE, jokeProvider.getRandomJoke());
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        new EndpointsAsyncTask(this).execute();
     }
 
 
