@@ -19,9 +19,9 @@ import javax.inject.Named;
 public class JokeEndpoint {
 
     /** A simple endpoint method that gets a joke*/
-    @ApiMethod(name = "putJoke")
-    public JokeBean putJoke(JokeBean jokeBean) {
-        return jokeBean;
+    @ApiMethod(name = "getJoke")
+    public JokeBean getJoke() {
+        return new JokeBean();
     }
 
 }
